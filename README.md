@@ -78,6 +78,18 @@ Approximately 96 million people in India have unmet assistive-technology needs, 
 
 ---
 
+## Schematic & circuit design
+
+The complete circuit schematic was designed in **KiCad** and the editable CAD project files are available in [`hardware/schematics/`](hardware/schematics/).
+
+<p align="center">
+  <img src="images/kicad.jpeg" alt="Smart Assistive Keyboard KiCad Circuit Schematic" width="100%">
+</p>
+
+*Complete KiCad circuit schematic: Raspberry Pi Pico W wiring to ST7735 1.8" SPI TFT, KY-023 analog joystick (VRy & SW), 6x active-low tactile push buttons (GP2–GP7), and 2S Li-ion battery pack with 2S BMS, power switch, LM2596 5.0 V buck regulator, and 1N5819 Schottky diode.*
+
+---
+
 ## Wiring / pin map
 
 | Pico W Pin | Label / GPIO | Connected Component | Function |
@@ -193,11 +205,15 @@ assistive-rotary-keyboard/
 |-- firmware/
 |   +-- code.py                    CircuitPython main loop and HID driver
 |-- hardware/
-|   +-- schematics/                Wiring references and circuit schematics
+|   +-- schematics/                KiCad schematic and project files
+|       |-- SmartAssistiveKeyboard.kicad_sch
+|       |-- SmartAssistiveKeyboard.kicad_pro
+|       +-- SmartAssistiveKeyboard.kicad_prl
 |-- images/
 |   |-- hero.jpg                   Device overview (active prototype)
 |   |-- prototype.jpg              Perfboard component layout
 |   |-- block-diagram.png          System power and signal block diagram
+|   |-- kicad.jpeg                 KiCad circuit schematic
 |   |-- certificate.jpg            MICA 2026 symposium certificate
 |   +-- user_testing/              Field testing and demonstration photographs
 |       |-- Cheshire_image_1(ok).jpeg

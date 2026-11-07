@@ -18,7 +18,7 @@
 | **SRM Institute of Science and Technology** | Department of Electronics and Communication Engineering, Ramapuram |
 
 <p align="center">
-  <img src="images/hero.jpg" alt="Smart Assistive Keyboard Prototype" width="85%">
+  <img src="images/hero.jpg" alt="Smart Assistive Keyboard Prototype" width="50%">
 </p>
 
 ---
@@ -36,6 +36,10 @@ Approximately 96 million people in India have unmet assistive-technology needs, 
 ---
 
 ## How it works
+
+<p align="center">
+  <img src="images/block-diagram.png" alt="System Block Diagram: Power Chain, Microcontroller, Display, and Inputs" width="90%">
+</p>
 
 ```text
 [ Joystick (VRy) ] ──> Scroll Character Carousel
@@ -110,18 +114,44 @@ Approximately 96 million people in India have unmet assistive-technology needs, 
 
 ## Prototype & field experience
 
-| | |
+### Hardware Prototype & Recognition
+
+| Integrated Hardware Prototype | MICA 2026 1st Place Award |
 |:---:|:---:|
-| <img src="images/prototype.jpg" width="45%" alt="Perfboard prototype assembly"><br>*Integrated perfboard prototype: Raspberry Pi Pico W, ST7735 TFT display, KY-023 joystick, and 6 tactile buttons.* | <img src="images/clinical-1.jpg" width="45%" alt="Therapy demonstration interaction"><br>*Hands-on demonstration with a participant who has motor difficulties.* |
-| <img src="images/clinical-2.jpg" width="45%" alt="Demonstration observation"><br>*Participant scrolling characters on the display under therapy staff observation.* | <img src="images/certificate.jpg" width="45%" alt="MICA 2026 First Place Certificate"><br>*First Place Certificate, Research Paper Presentation at MICA 2026 symposium.* |
+| <img src="images/prototype.jpg" width="100%" alt="Perfboard prototype assembly"><br>*Integrated perfboard prototype: Raspberry Pi Pico W, ST7735 TFT display, KY-023 joystick, and 6 tactile buttons.* | <img src="images/certificate.jpg" width="100%" alt="MICA 2026 First Place Certificate"><br>*First Place Certificate of Achievement, Research Paper Presentation at MICA 2026 symposium.* |
+
+### User Testing & Field Demonstrations
+
+The working prototype was demonstrated across two field sites: **Cheshire Homes India (Chennai)** and **Satyalok School**, engaging participants with motor difficulties under observation.
+
+#### 1. Cheshire Homes Field Demonstration
+
+| Setup & Overview | Joystick Character Navigation |
+|:---:|:---:|
+| <img src="images/user_testing/Cheshire_image_1(ok).jpeg" width="100%" alt="Cheshire Homes testing setup"><br>*Setup in occupational therapy unit: prototype connected via USB HID to laptop with team observation.* | <img src="images/user_testing/Cheshire_image_2(joystick).jpeg" width="100%" alt="Joystick character navigation"><br>*Participant navigating the character carousel using single-axis analog joystick deflection.* |
+| **Tactile Button Selection** | **Active Typing Session** |
+| <img src="images/user_testing/Cheshire_buttons_3(ok).jpeg" width="100%" alt="Tactile button confirmation"><br>*Participant confirming character selection via momentary tactile push button.* | <img src="images/user_testing/Cheshire_6(user).jpeg" width="100%" alt="Participant typing evaluation"><br>*Participant actively typing words and validating HID output on host computer.* |
+
+#### 2. Satyalok School Field Demonstration
+
+| Display & Connectivity Demonstration | Tactile Button Input |
+|:---:|:---:|
+| <img src="images/user_testing/Satyalok_image_2(ok).jpeg" width="100%" alt="Device demonstration"><br>*Demonstrating character display feedback and driverless USB HID input to student.* | <img src="images/user_testing/Satyalok_image_4(buttonclick).jpeg" width="100%" alt="Tactile button selection"><br>*Student confirming character input using tactile button cluster.* |
+| **Joystick Character Navigation** | **Joystick Deflection & Ergonomics** |
+| <img src="images/user_testing/Satyalok_image_5(joystick).jpeg" width="100%" alt="Joystick navigation"><br>*Student navigating character options using analog joystick.* | <img src="images/user_testing/Satyalok_image_7(joystick).jpeg" width="100%" alt="Joystick deflection testing"><br>*Testing joystick dead-zone deflection, ergonomics, and spring-return centering.* |
+
+<p align="center">
+  <img src="images/user_testing/Satyalok_image_10(usertest).jpeg" width="85%" alt="Hands-on typing evaluation at Satyalok"><br>
+  <em>Hands-on user testing session: student typing directly into host laptop via USB HID.</em>
+</p>
 
 ### Demonstration Feedback
-The working prototype was demonstrated in a therapy setting with two children who have motor difficulties. Qualitative feedback was collected from therapy staff:
+Qualitative feedback collected from therapy staff and observation during the field sessions:
 - **Control Identification**: Push buttons require physical keycaps with distinct colors or textures to help users identify actions.
 - **Portability & Charging**: Staff inquired about integrated battery charging and enclosure mounting options.
 - **Audio Prompts**: A recommendation was made to include audio confirmation prompts to assist users whose gaze shifts away from the screen.
 
-*Note: This interaction was a preliminary qualitative demonstration to gather feedback from therapy staff, not a formal study, clinical trial, or quantitative evaluation.*
+*Note: This interaction was a preliminary qualitative demonstration to gather feedback from therapy staff and participants, not a formal clinical trial or quantitative medical evaluation.*
 
 ---
 
@@ -177,12 +207,20 @@ assistive-rotary-keyboard/
 |-- docs/
 |   +-- 3d/                        (Planned) Interactive 3D web viewer
 |-- images/
-|   |-- hero.jpg                   Device overview
+|   |-- hero.jpg                   Device overview (active prototype)
 |   |-- prototype.jpg              Perfboard component layout
-|   |-- clinical-1.jpg             Therapy demonstration photo 1
-|   |-- clinical-2.jpg             Therapy demonstration photo 2
+|   |-- block-diagram.png          System power and signal block diagram
 |   |-- certificate.jpg            MICA 2026 symposium certificate
-|   +-- turntable.gif              (Placeholder) 3D model preview
+|   +-- user_testing/              Field testing and demonstration photographs
+|       |-- Cheshire_image_1(ok).jpeg
+|       |-- Cheshire_image_2(joystick).jpeg
+|       |-- Cheshire_buttons_3(ok).jpeg
+|       |-- Cheshire_6(user).jpeg
+|       |-- Satyalok_image_2(ok).jpeg
+|       |-- Satyalok_image_4(buttonclick).jpeg
+|       |-- Satyalok_image_5(joystick).jpeg
+|       |-- Satyalok_image_7(joystick).jpeg
+|       +-- Satyalok_image_10(usertest).jpeg
 |-- LICENSE                        MIT License
 +-- README.md                      Project documentation
 ```
@@ -217,10 +255,6 @@ assistive-rotary-keyboard/
 A custom ergonomic enclosure and keycap set are currently in development (see [Roadmap](#status--roadmap)). Once modeled, CAD assets will be hosted in `hardware/3d/model.glb` and viewable via the GitHub Pages viewer at:
 
 👉 **[Interactive 3D Model Viewer (docs/3d/)](docs/3d/)** *(Planned)*
-
-<p align="center">
-  <img src="images/turntable.gif" alt="3D Enclosure Turntable Placeholder" width="60%">
-</p>
 
 ---
 

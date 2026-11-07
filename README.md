@@ -1,24 +1,15 @@
 # Smart Assistive Keyboard — A Driverless HID Typing Interface for Motor-Impaired Users
 
-**1st Place, Research Paper Presentation — MICA 2026 · Department of Electronics and Communication Engineering, SRM Institute of Science and Technology, Ramapuram, Chennai**
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform: Raspberry Pi Pico W](https://img.shields.io/badge/Platform-Raspberry%20Pi%20Pico%20W-C51A4A?logo=raspberrypi&logoColor=white)](https://www.raspberrypi.com/products/raspberry-pi-pico/)
 [![Language: CircuitPython](https://img.shields.io/badge/Language-CircuitPython-3776AB?logo=python&logoColor=white)](https://circuitpython.org/)
-[![Status: Prototype](https://img.shields.io/badge/Status-Working%20Prototype-orange)](#status--roadmap)
-[![Award: MICA 2026](https://img.shields.io/badge/Award-1st%20Place%20(MICA%202026)-FFD700?logo=target&logoColor=black)](#acknowledgements)
 
-| Name | Role |
-|---|---|
-| **Aniruth B** | Firmware & system design |
-| **Madhavkrishnan K S** | Literature & testing |
-| **Vrithik R** | Hardware & power electronics |
-| **R.S Srihari** | |
-| **Dr. Arthi Rengaraj** | Project Guide |
-| **SRM Institute of Science and Technology** | Department of Electronics and Communication Engineering, Ramapuram |
+| Team | Project Guide | Department & Institution |
+|---|---|---|
+| **Aniruth B**<br>**Madhavkrishnan K S**<br>**Vrithik R**<br>**R.S Srihari** | **Dr. Arthi Rengaraj** | **Department of Electronics and Communication Engineering**<br>SRM Institute of Science and Technology, Ramapuram |
 
 <p align="center">
-  <img src="images/hero.jpg" alt="Smart Assistive Keyboard Prototype" width="50%">
+  <img src="images/hero.jpg" alt="Smart Assistive Keyboard Prototype" width="85%">
 </p>
 
 ---
@@ -202,10 +193,7 @@ assistive-rotary-keyboard/
 |-- firmware/
 |   +-- code.py                    CircuitPython main loop and HID driver
 |-- hardware/
-|   |-- schematics/                Wiring references and circuit schematics
-|   +-- 3d/                        (Planned) 3D enclosure CAD files
-|-- docs/
-|   +-- 3d/                        (Planned) Interactive 3D web viewer
+|   +-- schematics/                Wiring references and circuit schematics
 |-- images/
 |   |-- hero.jpg                   Device overview (active prototype)
 |   |-- prototype.jpg              Perfboard component layout
@@ -227,45 +215,14 @@ assistive-rotary-keyboard/
 
 ---
 
-## Status / Roadmap
-
-### Completed & Validated
-- [x] **USB HID Keystroke Output**: Tested and validated over USB on a laptop; transmits keystrokes from push buttons with no host drivers.
-- [x] **Hardware Perfboard Integration**: Pico W, ST7735 display, KY-023 joystick, and 6 tactile buttons assembled and wired on a single board.
-- [x] **Power Subsystem**: 2S Li-ion pack, BMS, and LM2596 buck converter supplying a verified 5.0 V to Pico VSYS.
-- [x] **Switch Debounce & Long-Press Logic**: 15 ms debounce and 600 ms long-press handling operational in firmware.
-- [x] **Qualitative Field Demonstration**: Working prototype demonstrated with therapy staff and two participants.
-
-### In Active Development
-- [ ] **Joystick Navigation**: Character scrolling on the display via analog deflection on VRy with a fixed repeat rate.
-- [ ] **Input Layer Switching**: Dynamic cycling between `ALPHA`, `NUM`, and `FUNC` layers via dedicated button.
-- [ ] **Display Buffer Optimization**: Improving ST7735 redraw speeds to eliminate visual flicker during continuous scrolling.
-- [ ] **Joystick Centre Calibration**: Dynamic ADC baseline calibration at startup to prevent centering drift.
-
-### Roadmap
-- [ ] **3D Enclosure & Keycaps**: Design and 3D print an ergonomic chassis with high-contrast, labeled keycaps.
-- [ ] **Interactive 3D Web Viewer**: Publish CAD turntable view (`docs/3d/` and `hardware/3d/model.glb`).
-- [ ] **Audio Feedback**: Integrate a piezo buzzer or voice module for audible character confirmation.
-- [ ] **Typing Performance Benchmarking**: Measure typing speed (WPM) and character error rates.
-
----
-
-## 3D model
-
-A custom ergonomic enclosure and keycap set are currently in development (see [Roadmap](#status--roadmap)). Once modeled, CAD assets will be hosted in `hardware/3d/model.glb` and viewable via the GitHub Pages viewer at:
-
-👉 **[Interactive 3D Model Viewer (docs/3d/)](docs/3d/)** *(Planned)*
-
----
-
 ## Team
 
-- **Aniruth B** — Firmware & system design
-- **Madhavkrishnan K S** — Literature & testing
-- **Vrithik R** — Hardware & power electronics
+- **Aniruth B**
+- **Madhavkrishnan K S**
+- **Vrithik R**
 - **R.S Srihari**
 
-**Guide**: Dr. Arthi Rengaraj  
+**Project Guide**: Dr. Arthi Rengaraj  
 Department of Electronics and Communication Engineering  
 SRM Institute of Science and Technology, Ramapuram, Chennai  
 
